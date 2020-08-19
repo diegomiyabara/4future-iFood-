@@ -125,7 +125,7 @@ function ProfilePage() {
     const goToEditAddress = () => {
         history.push("/profile-page/edit/address")
     }
- 
+
     const date = new Date(historyOrder.createdAt);
     const [weekDay, month, day, year] = date.toString().split(" ");
 
@@ -162,7 +162,6 @@ function ProfilePage() {
 
     useEffect(() => {
         const token = window.localStorage.getItem("token")
-  
         if(token === null){
             history.push("/login")
         }else{
@@ -193,7 +192,7 @@ function ProfilePage() {
         })
     }
 
-  return (
+    return (
     <>
         <HeaderContainer>
             <p>Meu perfil</p>
@@ -206,7 +205,7 @@ function ProfilePage() {
                     <UserInfo>{profile.cpf}</UserInfo>
                 </UserData>
                 <IconEdit onClick={goToEditProfile}>
-                    <p><img src={edit} /></p>
+                    <p><img src={edit} alt="Profile"/></p>
                 </IconEdit>
             </ContainerUser>
             <ContainerAddress>
@@ -215,7 +214,7 @@ function ProfilePage() {
                     <Address>{profile.address}</Address>
                 </AddressData>
                 <IconEditAddress onClick={goToEditAddress}>
-                    <p><img src={edit} /></p>
+                    <p><img src={edit} alt="Edit-Icon"/></p>
                 </IconEditAddress>
             </ContainerAddress>
             <DateOrder>
@@ -233,10 +232,10 @@ function ProfilePage() {
             </DateOrder>
         </ContainerProfile>
         <ContainerFooter>
-         <Footer />
+        <Footer />
         </ContainerFooter>
     </>
-  );
+    );
 }
 
 export default ProfilePage;

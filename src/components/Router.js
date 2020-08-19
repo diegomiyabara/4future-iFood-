@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route, BrowserRouter } from 'react-router-dom';
 import AddressPage from "./AddressPage/index";
-import CarPage from "./CarPage/index";
+import CartPage from "./CartPage/index";
 import Home from "./Home/index";
 import LoginPage from "./LoginPage/index";
 import ProfilePage from "./ProfilePage/index";
@@ -51,8 +51,11 @@ function Router() {
                 <Route exact path = "/profile-page/edit/address">
                     <ProfileAddressPage/>
                 </Route>
-                <Route exact path = "/car">
-                    <CarPage/>
+                <Route exact path = "/cart">
+                    <CartPage/>
+                </Route>
+                <Route path="/">
+                    <Home/>
                 </Route>
             </Switch>
         </BrowserRouter>

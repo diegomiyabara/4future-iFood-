@@ -60,50 +60,50 @@ function ProfileAddressPage() {
     const history = useHistory();
     const baseURL ="https://us-central1-missao-newton.cloudfunctions.net/fourFoodA"
 
-    const [address, setAddress] = useState({})
+    const [address] = useState({})
 
     useEffect(() => {
-      const token = window.localStorage.getItem("token")
+        const token = window.localStorage.getItem("token")
 
-      if(token === null){
-          history.push("/login")
-      }else{
+        if(token === null){
+            history.push("/login")
+        }else{
         getFullAddress()
-      }
-  },[history])
+        }
+    },)
 
-  const { form, onChange, setForm } = useForm({
+    const { form, onChange, setForm } = useForm({
     street: address.street,
     number: address.number,
     neighbourhood: address.neighbourhood,
     city: address.city,
     state: address.state,
     complement: address.complement
-  });
+    });
 
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
+    const handleInputChange = (event) => {
+        const { name, value } = event.target;
 
-    onChange(name, value);
-  };
+        onChange(name, value);
+    };
 
     const getFullAddress = () => {
-      const token = window.localStorage.getItem('token');
+        const token = window.localStorage.getItem('token');
 
-      axios.get(`${baseURL}/profile/address`, {headers: {auth:token}}).then((response) => {
-        onChange("street", response.data.address.street)
-        onChange("number", response.data.address.number)
-        onChange("neighbourhood", response.data.address.neighbourhood)
-        onChange("city", response.data.address.city)
-        onChange("state", response.data.address.state)
-        onChange("complement", response.data.address.complement)
-        setForm(response.data.address)
-    }).catch(()=> {
-        alert("Erro ao mostrar endereço!")
-    })
-  }
+        axios.get(`${baseURL}/profile/address`, {headers: {auth:token}}).then((response) => {
+            onChange("street", response.data.address.street)
+            onChange("number", response.data.address.number)
+            onChange("neighbourhood", response.data.address.neighbourhood)
+            onChange("city", response.data.address.city)
+            onChange("state", response.data.address.state)
+            onChange("complement", response.data.address.complement)
+            setForm(response.data.address)
+        }).catch(()=> {
+            alert("Erro ao mostrar endereço!")
+        })
+    }
 
-      const putAddress = (event) => {
+    const putAddress = (event) => {
         event.preventDefault();
         const token = window.localStorage.getItem('token');
         const body = {
@@ -122,11 +122,11 @@ function ProfileAddressPage() {
         }).catch(()=> {
             alert("Erro ao cadastrar endereço!")
         })
-      }
+    }
 
-      const Back =() => {
-          history.push('/profile-page')
-      }
+    const Back =() => {
+        history.push('/profile-page')
+    }
 
     return(
         <DivSignup>

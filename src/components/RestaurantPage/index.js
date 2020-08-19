@@ -16,22 +16,15 @@ function RestaurantPage() {
   const token = window.localStorage.getItem('token');
 
   useEffect(() => {
-    getRestaurants()
-  }, [])
-
-  const getRestaurants = async () => {
-      try {
-        const response = await axios.get("https://us-central1-missao-newton.cloudfunctions.net/fourFoodA/restaurants", {
+    axios.get("https://us-central1-missao-newton.cloudfunctions.net/fourFoodA/restaurants", {
           headers: {
             auth: token
           }
         })
-        setRestaurants(response.data.restaurants)
-      } catch(error) {
-        history.push("/address")
-        console.log(error.response)
-      }
-  };
+        .then((response) => {
+          setRestaurants(response.data.restaurants)
+        })        
+  }, [token])
 
   const goToSearchPage = () => {
     history.push("/search-restaurant")
@@ -146,6 +139,7 @@ function RestaurantPage() {
                   </ProductContainer>
             );
           } 
+          else return <></>
         })}
       </MainContainer>
     </RestContainer>

@@ -38,7 +38,7 @@ function Footer(props){
     }
 
     const goToCarPage = () => {
-        history.push("/car")
+        history.push("/cart")
     }
 
     const goToProfilePage = () => {
