@@ -12,7 +12,6 @@ function AddQuantity(props) {
   const addToCart = () => {
     if(quantidadeSelecionada > 0) {
       cartContext.dispatch({ type: "ADICIONA_NO_CARRINHO", produto: selectedProduct, quantidadeSelecionada: quantidadeSelecionada, restauranteId: restaurant.id })
-      console.log(cartContext)
   }
     props.setShowQuantity(!props.showQuantity);
     setQuantidadeSelecionada(0)
@@ -22,8 +21,6 @@ function AddQuantity(props) {
   const handleSelectChange = (e) => {
     setQuantidadeSelecionada(e.target.value)
   }
-
-  console.log(cartContext.carrinho)
 
     return (
       <MainContainer>

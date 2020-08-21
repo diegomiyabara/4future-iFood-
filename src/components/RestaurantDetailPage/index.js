@@ -141,9 +141,9 @@ const doceCategory = restaurant.products && restaurant.products.filter( product 
                         <DescriptionContainer>
                         <Top>
                             <ProductTitle>{product.name}</ProductTitle>
-                            {cartContext.carrinho.map( productCart => {
+                            {cartContext.carrinho.carrinho.map( productCart => {
                               if ( product.id === productCart.id ) {
-                                return <ContainerContador><Contador key={productCart.id}>{productCart.quantity}</Contador></ContainerContador>
+                                return <ContainerContador key={productCart.id}><Contador>{productCart.quantity}</Contador></ContainerContador>
                               }
                               else return <div key={productCart.id}></div>
                             })}
@@ -169,9 +169,9 @@ const doceCategory = restaurant.products && restaurant.products.filter( product 
                         <DescriptionContainer>
                           <Top>
                             <ProductTitle>{product.name}</ProductTitle>
-                            {cartContext.carrinho.map( productCart => {
+                            {cartContext.carrinho.carrinho.map( productCart => {
                               if ( product.id === productCart.id ) {
-                                return <ContainerContador><Contador key={productCart.id}>{productCart.quantity}</Contador></ContainerContador>
+                                return <ContainerContador key={productCart.id}><Contador >{productCart.quantity}</Contador></ContainerContador>
                               }
                               else return <div key={productCart.id}></div>
                             })}
@@ -198,9 +198,9 @@ const doceCategory = restaurant.products && restaurant.products.filter( product 
                         <DescriptionContainer>
                         <Top>
                             <ProductTitle>{product.name}</ProductTitle>
-                            {cartContext.carrinho.map( productCart => {
+                            {cartContext.carrinho.carrinho.map( productCart => {
                               if ( product.id === productCart.id ) {
-                                return <ContainerContador><Contador key={productCart.id}>{productCart.quantity}</Contador></ContainerContador>
+                                return <ContainerContador key={productCart.id}><Contador>{productCart.quantity}</Contador></ContainerContador>
                               }
                               else return <div key={productCart.id}></div>
                             })}
@@ -227,9 +227,9 @@ const doceCategory = restaurant.products && restaurant.products.filter( product 
                         <DescriptionContainer>
                         <Top>
                             <ProductTitle>{product.name}</ProductTitle>
-                            {cartContext.carrinho.map( productCart => {
+                            {cartContext.carrinho.carrinho.map( productCart => {
                               if ( product.id === productCart.id ) {
-                                return <ContainerContador><Contador key={productCart.id}>{productCart.quantity}</Contador></ContainerContador>
+                                return <ContainerContador  key={productCart.id}><Contador>{productCart.quantity}</Contador></ContainerContador>
                               }
                               else return <div key={productCart.id}></div>
                             })}
@@ -256,9 +256,9 @@ const doceCategory = restaurant.products && restaurant.products.filter( product 
                         <DescriptionContainer>
                         <Top>
                             <ProductTitle>{product.name}</ProductTitle>
-                            {cartContext.carrinho.map( productCart => {
+                            {cartContext.carrinho.carrinho.map( productCart => {
                               if ( product.id === productCart.id ) {
-                                return <ContainerContador><Contador key={productCart.id}>{productCart.quantity}</Contador></ContainerContador>
+                                return <ContainerContador key={productCart.id}><Contador>{productCart.quantity}</Contador></ContainerContador>
                               }
                               else return <div key={productCart.id}></div>
                             })}
@@ -285,9 +285,9 @@ const doceCategory = restaurant.products && restaurant.products.filter( product 
                         <DescriptionContainer>
                         <Top>
                             <ProductTitle>{product.name}</ProductTitle>
-                            {cartContext.carrinho.map( productCart => {
+                            {cartContext.carrinho.carrinho.map( productCart => {
                               if ( product.id === productCart.id ) {
-                                return <ContainerContador><Contador key={productCart.id}>{productCart.quantity}</Contador></ContainerContador>
+                                return <ContainerContador key={productCart.id}><Contador>{productCart.quantity}</Contador></ContainerContador>
                               }
                               else return <div key={productCart.id}></div>
                             })}
@@ -314,9 +314,9 @@ const doceCategory = restaurant.products && restaurant.products.filter( product 
                         <DescriptionContainer>
                         <Top>
                             <ProductTitle>{product.name}</ProductTitle>
-                            {cartContext.carrinho.map( productCart => {
+                            {cartContext.carrinho.carrinho.map( productCart => {
                               if ( product.id === productCart.id ) {
-                                return <ContainerContador><Contador key={productCart.id}>{productCart.quantity}</Contador></ContainerContador>
+                                return <ContainerContador key={productCart.id}><Contador>{productCart.quantity}</Contador></ContainerContador>
                               }
                               else return <div key={productCart.id}></div>
                             })}
@@ -343,9 +343,9 @@ const doceCategory = restaurant.products && restaurant.products.filter( product 
                         <DescriptionContainer>
                         <Top>
                             <ProductTitle>{product.name}</ProductTitle>
-                            {cartContext.carrinho.map( productCart => {
+                            {cartContext.carrinho.carrinho.map( productCart => {
                               if ( product.id === productCart.id ) {
-                                return <ContainerContador><Contador key={productCart.id}>{productCart.quantity}</Contador></ContainerContador>
+                                return <ContainerContador key={productCart.id}><Contador>{productCart.quantity}</Contador></ContainerContador>
                               }
                               else return <div key={productCart.id}></div>
                             })}
@@ -372,9 +372,9 @@ const doceCategory = restaurant.products && restaurant.products.filter( product 
                         <DescriptionContainer>
                         <Top>
                             <ProductTitle>{product.name}</ProductTitle>
-                            {cartContext.carrinho.map( productCart => {
+                            {cartContext.carrinho.carrinho.map( productCart => {
                               if ( product.id === productCart.id ) {
-                                return <ContainerContador><Contador key={productCart.id}>{productCart.quantity}</Contador></ContainerContador>
+                                return <ContainerContador key={productCart.id}><Contador>{productCart.quantity}</Contador></ContainerContador>
                               }
                               else return <div key={productCart.id}></div>
                             })}
@@ -401,9 +401,9 @@ const doceCategory = restaurant.products && restaurant.products.filter( product 
                         <DescriptionContainer>
                         <Top>
                             <ProductTitle>{product.name}</ProductTitle>
-                            {cartContext.carrinho.map( productCart => {
+                            {cartContext.carrinho.carrinho.map( productCart => {
                               if ( product.id === productCart.id ) {
-                                return <ContainerContador><Contador key={productCart.id}>{productCart.quantity}</Contador></ContainerContador>
+                                return <ContainerContador key={productCart.id}><Contador>{productCart.quantity}</Contador></ContainerContador>
                               }
                               else return <div key={productCart.id}></div>
                             })}

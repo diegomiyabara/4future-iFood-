@@ -5,6 +5,7 @@ export const ContainerFooter = styled.div `
     bottom: 0;
     width: 100%;
     background-color: #fff;
+    text-align: center;
 `;
 
 export const CartHeader = styled.div`
@@ -70,7 +71,7 @@ export const CartItem = styled.div`
     border-radius: 8px;
     margin-top: 0.5rem;
     width: 20.5rem;
-    margin: 0 auto;
+    margin: 0.5rem auto;
 `
 
 export const ItemImg = styled.img`
@@ -156,4 +157,99 @@ export const RemoveButton = styled.button `
 
 export const NoItemMessage = styled.p`
     text-align: center;
+`
+
+export const Freight = styled.div`
+    display: flex;
+    flex-direction: row-reverse;
+    font-family: Roboto;
+    font-size: 1rem;
+    margin-top: 2rem;
+    margin-right: 1rem;
+`
+
+export const RestaurantName = styled.p`
+    width: 20.5rem;
+    height: 1.125rem;
+    font-family: Roboto;
+    font-size: 1rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.39px;
+    color: #e8222e;
+    margin: 1rem;
+    padding: 0;
+`
+
+export const RestaurantAddress = styled.p`
+    width: 20.5rem;
+    height: 1.125rem;
+    font-family: Roboto;
+    font-size: 1rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.39px;
+    color: #b8b8b8;
+    margin: 0.5rem 1rem;
+    padding: 0;
+`
+
+export const EstimatedTime = styled.p`
+width: 20.5rem;
+    height: 1.125rem;
+    font-family: Roboto;
+    font-size: 1rem;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.39px;
+    color: #b8b8b8;
+    margin: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    padding: 0;
+`
+
+export const Subtotal = styled.div`
+    display: flex;
+    margin: 1rem;
+    justify-content: space-between;
+`
+
+export const SubtotalTitle = styled.p`
+    color: ${props => props.color};
+    font-family: Roboto;
+    font-size: 1rem;
+    font-weight: ${props => props.fontweight};
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -0.39px;
+    margin: 0;
+    padding: 0;
+`
+
+export const PaymentTitle = styled.div`
+    margin: 1rem;
+    margin-bottom: 0;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid black;
+`
+
+export const PaymentMethod = styled.div`
+    margin: 0 1rem;
+    margin-bottom: 8rem;
+`
+
+export const StyledButton = styled.button`
+    width: 20.5rem;
+    height: 2.625rem;
+    border-radius: 2px;
+    background-color: ${props => props.color};
+    border: none;
+    margin: 1rem auto;
 `
