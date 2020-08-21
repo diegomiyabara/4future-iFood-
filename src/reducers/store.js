@@ -1,8 +1,9 @@
 export const initialState = {
-  carrinho: []
+  carrinho: [],
+  restauranteId: ""
 }
 
-export const storeReducer = (state, action) => {console.log(state.carrinho)
+export const storeReducer = (state, action) => {
   switch (action.type) {
     case "ADICIONA_NO_CARRINHO":
       const produtosCarrinho = state.carrinho.findIndex(produto => {
@@ -10,9 +11,10 @@ export const storeReducer = (state, action) => {console.log(state.carrinho)
       })
       
       let novoCarrinho
-      console.log(produtosCarrinho === -1)
+      let newRestauranteId
       if (produtosCarrinho === -1) {
-        novoCarrinho = [...state.carrinho, { ...action.produto, quantity: action.quantidadeSelecionada, restauranteId: action.restauranteId }]
+        novoCarrinho = [...state.carrinho, { ...action.produto, quantity: action.quantidadeSelecionada}]
+        newRestauranteId = action.restauranteId
       } else {
         novoCarrinho = state.carrinho.map(produto => {
           if(produto.id === action.produto.id) {
@@ -24,15 +26,21 @@ export const storeReducer = (state, action) => {console.log(state.carrinho)
           return produto
         })
       }
-      return { ...state, carrinho: novoCarrinho }
+      return { ...state, carrinho: novoCarrinho, restauranteId: newRestauranteId }
 
       case "REMOVE_ITEM_FROM_CART": {
         const novoCarrinho = state.carrinho.filter(produto => {
-          return produto.id !== action.produto.id
+          return produto.id !== action.productId
         })
         return { ...state, carrinho: novoCarrinho }
       }
+
+      case "RESET_CART": {
+        return {...state, carrinho: [], restauranteId:""}
+      }
+
       default: 
       return state
+
   }
 }
